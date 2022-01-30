@@ -5,7 +5,7 @@ Description: "CloudFormation test"
 Parameters:
   Keypairdata:
     Description: Key pair for SSH access to instance 
-    Type: String #最後のKeyNameは固定
+    Type: String #最後のKeyNameは固定.
     Default: id_rsa_citest  
 
   #RDS
@@ -233,7 +233,7 @@ Resources: #ここからAWSの定義（リソース）を記述していく
       DBSubnetGroupName: !Ref cfsubgroup 
       PubliclyAccessible: false #true????internetface????????IP????????false????internal?????????
       AvailabilityZone: !Select
-                        - 1
+                        - 0
                         - !GetAZs 
                           Ref: 'AWS::Region' 
       AutoMinorVersionUpgrade: true #???????????????????
