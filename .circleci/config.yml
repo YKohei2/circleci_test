@@ -16,7 +16,7 @@ jobs: #seyhello, aws-cli exampleの順番でjobが実行される
       - aws-cli/setup: #orbsから引っ張て来てセットアップしている
           aws-access-key-id: AWS_ACCESS_KEY_MAIN #circle ciのEnvironment variable（環境変数)で設定した名前と同じ
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY_MAIN
-          aws-region: aws_region #環境変数で定義する
+          aws-region: aws_default_region #環境変数で定義する
       - run: 
           name: "upload CloudFormation" #cloudformationをAWS CLIで実行させる。
           command: "aws cloudformation create-stack --stack-name testclci --region ap-northeast-1 --template-body file://my-cloudformation-test.yml"
