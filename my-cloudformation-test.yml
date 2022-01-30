@@ -5,7 +5,7 @@ Description: "CloudFormation test"
 Parameters:
   Keypairdata:
     Description: Key pair for SSH access to instance 
-    Type: String #最後のKeyNameは固定
+    Type: String #最後のKeyNameは固定.
     Default: id_rsa_citest  
 
   #RDS
